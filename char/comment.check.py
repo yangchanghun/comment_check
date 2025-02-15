@@ -69,7 +69,7 @@ y_val = np.array(y_val, dtype=np.float32).reshape(-1, 1)
 # ✅ 모델 정의 (출력 차원 수정)
 # 올바른 vocab_size 설정
 vocab_size = max(x_train.max(), x_val.max()) + 1
-
+ 
 embedding_dim = 16
 maxlen = 100
 
