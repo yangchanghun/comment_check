@@ -7,8 +7,8 @@ data = pd.read_csv('Dataset_cleaned.csv')
 label = ['hate','non-hate']
 
 def absolute_value(pct, all_values):
-    absolute = int(round(pct/100.*sum(all_values)))  # 비율을 개수로 변환
-    return f"{absolute:,} ({pct:.1f}%)"  # 3자리마다 콤마 추가
+    absolute = int(round(pct/100.*sum(all_values))) 
+    return f"{absolute:,} ({pct:.1f}%)" 
 
 hate_speach = data[data['label'] == 0]['label'].count()
 nonhate_speach = data[data['label'] == 1]['label'].count()

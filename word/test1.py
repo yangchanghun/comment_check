@@ -5,7 +5,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 url_id = ['ooWegesHKwY']
 
 def croll_youtube(i):
-    api_key = 'api키를 입력하시오오'
+    api_key = 'AIzaSyBDLTQxXLU4SU0WDnj9f-BhrS7smGNngo8'
     video_id = i
     comments = list()
     api_obj = build('youtube', 'v3', developerKey=api_key)

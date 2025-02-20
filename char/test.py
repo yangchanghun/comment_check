@@ -5,7 +5,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 url_id = ['ooWegesHKwY']
 
 def croll_youtube(i):
-    api_key = 'api키를 입력하시오오'
+    api_key = 'AIzaSyBDLTQxXLU4SU0WDnj9f-BhrS7smGNngo8'
     video_id = i
     comments = list()
     api_obj = build('youtube', 'v3', developerKey=api_key)
@@ -48,7 +48,7 @@ from tensorflow.keras.models import load_model
 import tensorflow as tf
 import pickle
 model = load_model('best_performed_model.h5')
-print("✅ 전체 모델을 성공적으로 불러왔습니다!")
+
 # loading
 with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
@@ -67,9 +67,9 @@ def predict_text(model, tokenizer, text, maxlen=100):
     label = (prediction > 0.5).astype(int)[0][0]
 
     # 5️⃣ 결과 출력
-    print(f"🔹 입력 문장: {text}")
-    print(f"🔹 예측된 라벨: {label} (0: 부정, 1: 긍정)")
-    print(f"🔹 예측된 predict: {prediction} (0: 부정, 1: 긍정)")
+    print(f" 입력 문장: {text}")
+    print(f" 예측된 라벨: {label} (0: 부정, 1: 긍정)")
+    print(f" 예측된 predict: {prediction} (0: 부정, 1: 긍정)")
 
 
 from tensorflow.keras.models import load_model
