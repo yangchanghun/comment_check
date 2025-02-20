@@ -8,7 +8,7 @@ data = pd.read_csv('../Dataset_cleaned.csv')
 print(data)
 data['content'] = data['content'].str.replace('[^ㄱ-ㅎ ㅏ-ㅣ 가-힣 ]','',regex=True)
 print(data['content'].isna().sum()) # null 값 있는지 확인
-
+data = data.dropna(subset=['content'])
 
 #토큰 설정 OOV => 임시 데이터 설정정
 tokenizer = tf.keras.preprocessing.text.Tokenizer(char_level = True,oov_token='<OOV>')
